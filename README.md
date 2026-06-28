@@ -14,15 +14,17 @@ BlueEye SOC Simulator was built to solve exactly that.
 * Learn how MITRE ATT&CK is used to classify and understand attacker behavior
 * Extract IOCs and check them against real threat intelligence platforms like VirusTotal and AbuseIPDB
 * Investigate incidents, document findings, and resolve cases — exactly like a Tier-1 and Tier-2 SOC analyst does every day
+
 This project is designed to operate in both offline and online environments.
-Offline Mode
+
+## **Offline Mode**
 
 Log analysis
 IOC extraction
 Local detection rules
 Report generation
 
-Online Mode
+## **Online Mode**
 
 VirusTotal reputation checks
 MITRE ATT&CK mapping
