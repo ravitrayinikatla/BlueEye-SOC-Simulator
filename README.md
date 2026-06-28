@@ -8,14 +8,26 @@ Cybersecurity students and SOC beginners face a common problem — they understa
 
 BlueEye SOC Simulator was built to solve exactly that.
 
-This project provides a completely free, hands-on SOC environment where learners can:
-
 * See how real cyberattacks generate logs across different systems
 * Understand how a SIEM detects threats using rule-based correlation
 * Practice the full SOC analyst workflow — from alert triage to incident resolution
 * Learn how MITRE ATT&CK is used to classify and understand attacker behavior
 * Extract IOCs and check them against real threat intelligence platforms like VirusTotal and AbuseIPDB
 * Investigate incidents, document findings, and resolve cases — exactly like a Tier-1 and Tier-2 SOC analyst does every day
+This project is designed to operate in both offline and online environments.
+Offline Mode
+
+Log analysis
+IOC extraction
+Local detection rules
+Report generation
+
+Online Mode
+
+VirusTotal reputation checks
+MITRE ATT&CK mapping
+Threat intelligence enrichment
+CVE lookups
 
 The goal is to bridge the gap between theoretical cybersecurity knowledge and real-world SOC operations — without needing access to any paid platform or enterprise tool.
 
