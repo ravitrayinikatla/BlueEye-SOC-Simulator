@@ -1,132 +1,168 @@
-```markdown
-<div align="center">
+# 👁 BlueEye SOC Simulator v2
 
-# 👁 BlueEye SOC Simulator
+A Python-based Security Operations Center (SOC) simulator that generates cyberattack logs, detects threats using custom detection rules, maps alerts to MITRE ATT&CK, and displays everything in a professional dark SOC dashboard.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
-![Flask](https://img.shields.io/badge/Flask-2.x-black?style=flat-square&logo=flask)
-![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+## Objective
 
-A beginner-friendly SOC simulator that generates cyberattack logs, detects threats, and displays them in a professional security dashboard — built with Python and Flask.
+Cybersecurity students and SOC beginners face a common problem — they understand the theory but have no practical environment to apply it. Tools like Splunk, IBM QRadar, and Microsoft Sentinel that are used in real SOC environments are behind expensive licenses and enterprise access, making hands-on learning impossible for most learners.
 
-</div>
+BlueEye SOC Simulator was built to solve exactly that.
 
----
+This project provides a completely free, hands-on SOC environment where learners can:
 
-## What is this?
+* See how real cyberattacks generate logs across different systems
+* Understand how a SIEM detects threats using rule-based correlation
+* Practice the full SOC analyst workflow — from alert triage to incident resolution
+* Learn how MITRE ATT&CK is used to classify and understand attacker behavior
+* Extract IOCs and check them against real threat intelligence platforms like VirusTotal and AbuseIPDB
+* Investigate incidents, document findings, and resolve cases — exactly like a Tier-1 and Tier-2 SOC analyst does every day
 
-This project simulates what a **Security Operations Center (SOC) analyst** does every day.
+The goal is to bridge the gap between theoretical cybersecurity knowledge and real-world SOC operations — without needing access to any paid platform or enterprise tool.
 
-It generates fake cyberattack logs, detects the attacks using Python rules, maps them to **MITRE ATT&CK**, and shows everything in a dark SOC dashboard where you can investigate and resolve incidents — just like real tools such as Splunk or IBM QRadar.
+## Key Features
 
----
+* Attack Simulation — 8 real-world cyberattacks simulated across 6 different log sources
+* Log Generation — Realistic JSON logs from Linux Auth, DNS, Firewall, Web Server, Windows Security, and Bash History
+* Detection Engine — Custom Python rule-based detection with threat severity scoring from 0 to 100
+* MITRE ATT&CK Mapping — Every alert automatically mapped to a technique ID, technique name, and tactic
+* Incident Queue — Full status lifecycle tracking — NEW → INVESTIGATING → RESOLVED → FALSE POSITIVE
+* Investigation Panel — Per-incident deep dive with IOCs, attack timeline, Windows Event IDs, and analyst notes
+* IOC Viewer — All attacker IPs and domains aggregated across alerts with direct VirusTotal and AbuseIPDB links
+* REST API — /api/alerts endpoint returns all alerts as JSON for integration with external tools
+* SOC Dashboard — Professional dark UI inspired by Splunk with severity chart, tactic breakdown, and live clock
+
+## Architecture
+
+```
+LAYER 1 — ATTACK SIMULATION
+generators/generate_all.py
+Simulates 8 attacks and writes JSON logs to /logs/
+          ↓
+LAYER 2 — DETECTION ENGINE
+detection/engine.py
+Reads logs → applies detection rules → scores threats → maps to MITRE ATT&CK
+          ↓
+LAYER 3 — INCIDENT MANAGEMENT
+incident_response/manager.py
+Assigns incident IDs → tracks status → stores analyst notes
+          ↓
+LAYER 4 — SOC DASHBOARD
+app.py → dashboard.html / investigate.html / iocs.html
+Displays alerts → investigation panel → IOC viewer
+```
+
+## SOC Analyst Workflow
+
+```
+Step 1  — NEW alert appears on the dashboard
+          ↓
+Step 2  — Analyst opens the Investigation Panel
+          ↓
+Step 3  — Reads incident details — Source IP, Host, Threat Score
+          ↓
+Step 4  — Checks MITRE ATT&CK technique — understands how the attack works
+          ↓
+Step 5  — Reviews IOCs — checks attacker IP on VirusTotal and AbuseIPDB
+          ↓
+Step 6  — Reads Windows Event IDs — understands what attacker did on the system
+          ↓
+Step 7  — Reviews Attack Timeline — understands the sequence of events
+          ↓
+Step 8  — Changes status NEW → INVESTIGATING
+          ↓
+Step 9  — Documents findings in Investigation Notes
+          ↓
+Step 10 — Takes remediation action — block IP, isolate host, reset credentials
+          ↓
+Step 11 — Changes status INVESTIGATING → RESOLVED ✅
+```
+
+## Repository Structure
+
+BlueEye-SOC-Simulator/
+│
+├── generators/
+│   └── generate_all.py
+├── detection/
+│   └── engine.py
+├── incident_response/
+│   └── manager.py
+├── dashboard/
+│   └── templates/
+│       ├── base.html
+│       ├── dashboard.html
+│       ├── investigate.html
+│       └── iocs.html
+├── logs/
+├── app.py
+└── README.md
 
 ## Attacks Simulated
 
-| Attack | Severity |
-|--------|----------|
-| Brute Force → Account Compromise | 🔴 Critical |
-| Privilege Escalation | 🔴 Critical |
-| Data Exfiltration | 🔴 Critical |
-| C2 Beaconing | 🔴 Critical |
-| DNS Tunneling | 🟠 High |
-| SQL Injection | 🟠 High |
-| Port Scan | 🟠 High |
-| Cross-Site Scripting (XSS) | 🟡 Medium |
-
----
-
-## Dashboard Pages
-
-| Page | URL | What you can do |
-|------|-----|-----------------|
-| Alert Dashboard | `/` | See all detected threats |
-| Investigation | `/investigate/<id>` | Deep dive into any alert |
-| IOC Viewer | `/iocs` | View attacker IPs and domains |
-| API | `/api/alerts` | Get all alerts as JSON |
-
----
+| Attack | MITRE ID | Severity |
+|--------|----------|----------|
+| Brute Force → Account Compromise | T1110 | 🔴 Critical |
+| Privilege Escalation | T1078 | 🔴 Critical |
+| Data Exfiltration | T1041 | 🔴 Critical |
+| C2 Beaconing | T1071.001 | 🔴 Critical |
+| DNS Tunneling | T1071.004 | 🟠 High |
+| SQL Injection | T1190 | 🟠 High |
+| Port Scan | T1046 | 🟠 High |
+| Cross-Site Scripting (XSS) | T1059.007 | 🟡 Medium |
 
 ## Installation
 
-### Requirements
-- Python 3.10 or above
-- pip
-
-### Steps
-
-**1. Clone the repository**
 ```bash
+# 1. Clone the repository
 git clone https://github.com/ravitrayinikatla/BlueEye-SOC-Simulator.git
 cd BlueEye-SOC-Simulator
-```
 
-**2. Install Flask**
-```bash
+# 2. Install dependencies
 pip install flask
-```
 
-**3. Generate attack logs**
-```bash
+# 3. Generate attack logs
 python generators/generate_all.py
-```
 
-**4. Start the dashboard**
-```bash
+# 4. Start the dashboard
 python app.py
 ```
 
-**5. Open your browser**
-```
-http://127.0.0.1:5000
-```
+Open browser — http://127.0.0.1:5000
 
-That's it. The dashboard will show all detected attacks.
+## Dashboard Pages
 
----
+Page                  URL                  Description
+Alert Dashboard       /                    View all detected threats and severity chart
+Investigation Panel   /investigate/id      Deep dive into any alert — IOCs, timeline, MITRE, notes
+IOC Viewer            /iocs                All attacker IPs and domains with threat intel links
+REST API              /api/alerts          Get all alerts as JSON
 
-## How it works
+## Tools Used
 
-```
-Step 1 — generate_all.py creates fake attack logs
-Step 2 — detection/engine.py reads the logs and detects attacks
-Step 3 — Every alert is mapped to a MITRE ATT&CK technique
-Step 4 — Flask dashboard displays all alerts
-Step 5 — You investigate, add notes, and resolve incidents
-```
+- Python
+- Flask
+- Chart.js
+- MITRE ATT&CK Framework
+- VirusTotal
+- AbuseIPDB
+- VS Code
+- Git
+- GitHub
 
----
+## References
 
-## Tech Used
+- MITRE ATT&CK Framework
+- OWASP Top 10 (2021)
+- VirusTotal Documentation
+- AbuseIPDB Documentation
+- Flask Documentation
+- Cybersecurity and Infrastructure Security Agency (CISA)
 
-- **Python** — detection engine and log generation
-- **Flask** — web dashboard
-- **Chart.js** — severity chart
-- **MITRE ATT&CK** — threat classification
+## Outcome
 
----
+Successfully built a fully functional SOC simulator that replicates the real analyst workflow — generating attack logs across 6 log sources, detecting 8 attack types, mapping every alert to MITRE ATT&CK, and providing a professional dashboard with incident investigation, IOC extraction, and status tracking.
 
-## MITRE ATT&CK Techniques Covered
+## Author
 
-| Technique ID | Technique | Tactic |
-|---|---|---|
-| T1110 | Brute Force | Credential Access |
-| T1078 | Valid Accounts | Privilege Escalation |
-| T1041 | Exfiltration Over C2 | Exfiltration |
-| T1071.001 | Web Protocols | Command & Control |
-| T1071.004 | DNS | Command & Control |
-| T1190 | Exploit Public-Facing App | Initial Access |
-| T1046 | Network Service Discovery | Discovery |
-| T1059.007 | JavaScript | Execution |
-
----
-
-<div align="center">
-
-Made by **Ravi Trayini Katla**
-
-[![GitHub](https://img.shields.io/badge/GitHub-ravitrayinikatla-black?style=flat-square&logo=github)](https://github.com/ravitrayinikatla)
-
-
-</div>
+Katla Ravitrayini
+https://github.com/ravitrayinikatla
