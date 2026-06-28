@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block title %}- Alert Dashboard{% endblock %}
+{% block topbar_title %}Security Alert Dashboard{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div>
+        <div class="page-title">Incident Queue</div>
+        <div class="page-sub">// real-time threat detection &amp; correlation engine</div>
+    </div>
+    <div style="display:flex;gap:.7rem">
+        <button class="btn btn-ghost" onclick="location.reload()">↺ Refresh</button>
+        <a href="/api/alerts" class="btn btn-primary">JSON API ↗</a>
+    </div>
+</div>
+
+<!-- STAT CARDS -->
+<div class="stats-grid">
+    <div class="stat-card stat-total">
+        <div class="stat-label">Total Alerts</div>
+        <div class="stat-value">{{ stats.total }}</div>
+    </div>
+    <div class="stat-card stat-critical">
+        <div class="stat-label">Critical</div>
+        <div class="stat-value">{{ stats.critical }}</div>
+    </div>
+    <div class="stat-card stat-high">
+        <div class="stat-label">High</div>
+        <div class="stat-value">{{ stats.high }}</div>
+    </div>
+    <div class="stat-card stat-medium">
+        <div class="stat-label">Medium</div>
+        <div class="stat-value">{{ stats.medium }}</div>
+    </div>
+    <div class="stat-card stat-low">
+        <div class="stat-label">Low</div>
+        <div class="stat-value">{{ stats.low }}</div>
+    </div>
+</div>
+
+<div class="two-col">
+<!-- ALERTS TABLE -->
+<div class="card">
+    <div class="card-header">
+        <span class="card-title">⚡ Active Alerts</span>
+        <span class="mono">{{ stats.total }} detections</span>
+    </div>
+    {% if alerts %}
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Severity</th>
+                <th>Alert</th>
+                <th>Source IP</th>
+                <th>MITRE</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alert in alerts %}
+        <tr>
+            <td><span class="mono" style="font-size:.65rem;color:var(--dim)">#{{ alert.incident_id }}</span></td>
+            <td><span class="badge badge-{{ alert.severity }}">{{ alert.severity }}</span></td>
+            <td>
+                <div style="font-weight:600;font-size:.8rem">{{ alert.alert }}</div>
+                <div class="mono" style="margin-top:2px;font-size:.67rem">
+                    {% if alert.count is defined %}{{ alert.count }} events · {% endif %}
+                    {{ alert.log_source }}
+                </div>
+            </td>
+            <td><span class="mono">{{ alert.ip or '—' }}</span></td>
+            <td>
+                {% if alert.mitre_id %}
+                <span class="mitre">{{ alert.mitre_id }}</span>
+                <div style="font-size:.65rem;color:var(--dim);margin-top:2px">{{ alert.mitre_tactic }}</div>
+                {% else %}—{% endif %}
+            </td>
+            <td>
+                <div class="score-wrap">
+                    <div class="score-bar">
+                        <div class="score-fill" style="width:{{ alert.score }}%;background:{% if alert.score >= 80 %}var(--critical){% elif alert.score >= 55 %}var(--high){% elif alert.score >= 30 %}var(--medium){% else %}var(--low){% endif %}"></div>
+                    </div>
+                    <span class="score-num">{{ alert.score }}</span>
+                </div>
+            </td>
+            <td><span class="status-badge status-{{ alert.status }}">{{ alert.status }}</span></td>
+            <td><a href="/investigate/{{ alert.incident_id }}" class="btn btn-primary" style="padding:3px 9px;font-size:.67rem">Investigate →</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="empty">✔ No alerts — run generators/generate_all.py first</div>
+    {% endif %}
+</div>
+
+<!-- SIDEBAR -->
+<div style="display:flex;flex-direction:column;gap:1.3rem">
+
+    <!-- SEVERITY CHART -->
+    <div class="card">
+        <div class="card-header"><span class="card-title">📊 Severity Split</span></div>
+        <div style="padding:1rem;height:210px;display:flex;align-items:center;justify-content:center">
+            <canvas id="sevChart"></canvas>
+        </div>
+    </div>
+
+    <!-- TACTIC BREAKDOWN -->
+    <div class="card">
+        <div class="card-header"><span class="card-title">🗺 MITRE Tactics</span></div>
+        <div style="padding:.5rem 0">
+            {% set tactics = {} %}
+            {% for a in alerts %}
+                {% if a.mitre_tactic %}
+                    {% set _ = tactics.update({a.mitre_tactic: tactics.get(a.mitre_tactic, 0) + 1}) %}
+                {% endif %}
+            {% endfor %}
+            {% for tactic, count in tactics.items() %}
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:.5rem 1.1rem;border-bottom:1px solid var(--border)">
+                <span style="font-size:.75rem;color:var(--muted)">{{ tactic }}</span>
+                <span class="mono" style="color:var(--cyan)">{{ count }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- TOP IOCs -->
+    <div class="card">
+        <div class="card-header">
+            <span class="card-title">🔍 Top IOCs</span>
+            <a href="/iocs" class="btn btn-ghost" style="padding:2px 8px;font-size:.67rem">View All →</a>
+        </div>
+        <div style="padding:.5rem 0">
+            {% set seen_iocs = [] %}
+            {% for a in alerts %}
+                {% for ioc in a.get('iocs', []) %}
+                    {% if ioc not in seen_iocs and seen_iocs|length < 6 %}
+                        {% set _ = seen_iocs.append(ioc) %}
+                        <div style="padding:.45rem 1.1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+                            <span class="mono" style="font-size:.72rem">{{ ioc }}</span>
+                            <span class="badge badge-{{ a.severity }}" style="font-size:.6rem">{{ a.severity }}</span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const ctx = document.getElementById('sevChart');
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Critical','High','Medium','Low'],
+        datasets:[{
+            data:[{{ stats.critical }},{{ stats.high }},{{ stats.medium }},{{ stats.low }}],
+            backgroundColor:['rgba(239,68,68,.8)','rgba(249,115,22,.8)','rgba(234,179,8,.8)','rgba(16,185,129,.8)'],
+            borderColor:['#ef4444','#f97316','#eab308','#10b981'],
+            borderWidth:1.5, hoverOffset:5
+        }]
+    },
+    options:{
+        responsive:true, maintainAspectRatio:true, cutout:'68%',
+        plugins:{
+            legend:{position:'bottom',labels:{color:'#94a3b8',font:{family:'monospace',size:10},padding:10,boxWidth:9}},
+            tooltip:{backgroundColor:'#0f1830',borderColor:'rgba(37,99,235,.3)',borderWidth:1,titleColor:'#e2e8f0',bodyColor:'#94a3b8'}
+        }
+    }
+});
+</script>
+{% endblock %}

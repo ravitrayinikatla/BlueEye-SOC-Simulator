@@ -1,0 +1,90 @@
+[
+  {
+    "timestamp": "2026-06-27 20:41:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4688,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "whoami.exe",
+    "details": "New process: whoami /priv",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:42:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4688,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "net.exe",
+    "details": "New process: net localgroup administrators",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:43:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4672,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "lsass.exe",
+    "details": "Special privileges assigned to new logon",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:44:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4624,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "winlogon.exe",
+    "details": "Logon Type 3: Network logon from unusual IP",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:45:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4698,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "taskschd.msc",
+    "details": "Scheduled task created: SysUpdate",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:46:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 7045,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "services.exe",
+    "details": "New service installed: RemoteAdmin",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:47:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4688,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "mimikatz.exe",
+    "details": "New process: mimikatz.exe",
+    "host": "DC-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:48:58.392097",
+    "log_source": "windows_security",
+    "event_type": "privilege_escalation",
+    "event_id": 4648,
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "process": "runas.exe",
+    "details": "Explicit credential logon attempt",
+    "host": "DC-01"
+  }
+]

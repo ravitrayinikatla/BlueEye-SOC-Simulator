@@ -1,0 +1,479 @@
+[
+  {
+    "timestamp": "2026-06-27 20:27:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "pi",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "pi",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "pi",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "pi",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:38:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "test",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:38:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:38:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:38:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:39:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "ubuntu",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:39:18.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "198.51.100.14",
+    "user": "pi",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:39:33.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "203.0.113.99",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:39:48.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:40:03.392097",
+    "log_source": "linux_auth",
+    "event_type": "failed_login",
+    "ip": "45.33.32.156",
+    "user": "root",
+    "details": "Authentication failure",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:41:08.392097",
+    "log_source": "linux_auth",
+    "event_type": "successful_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Accepted password",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:41:38.392097",
+    "log_source": "linux_auth",
+    "event_type": "successful_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Accepted password",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:42:08.392097",
+    "log_source": "linux_auth",
+    "event_type": "successful_login",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "details": "Accepted password",
+    "host": "web-server-01"
+  }
+]

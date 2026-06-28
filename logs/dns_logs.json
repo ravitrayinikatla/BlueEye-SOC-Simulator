@@ -1,0 +1,722 @@
+[
+  {
+    "timestamp": "2026-06-27 20:27:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "b4aao1svynne5hw1aa0sensw8t9xaaiispf42qvr69oc71j1j1rdn5fybx4.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:27:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "05uma6pvrqd7s676fsidthmhficqqlx566e1v37lhdg3c0b1vkdym9e8lkpqkes1wcz9xjs.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "5cf91pfg59yyh81p534gvxmk26xreoj27gdjhkfylybmjiyle4c6n.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "dhasbs090ufs2uumkxbaomejro0xmdv60errxlkmcrm.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "wi1ucxb0mulvxqya745cznuomeop8h4an9zyjejub1gh.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "2crwl2773divcv525xj95ix06wl7nk4llp90779d7t5cd2bllkkmsh9e27.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "hogkocz7n5n0vztr4a02zxsvv5mrcxdal1dminnxemrqife6jeqfk3oh9p7cl4p73n57t8snm64nktxk.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "qwdlp92tfz4754obxzhtfxxj4cggfkkbc8k5a5jmv5l568sdx6zm67gu9033k3.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "5l0afcnb1hevgunssqr2v2e9a9b172rzlifhwdatsk74p1uebqhwlteyx1nrkmd6f6crdjdy6xr.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "mx2w2py7buy1066o8fsvkq49hw8x3we5gs9vi748lyckv.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "9mie8suzgsbz3efa27zqxj4a2lrdhxtdzcw94zj6240n1t5wzah44hpl8wpzberos6.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "jfoaq1knqvhaankj8o9d1wr9rewjjmxkgovkhu94b.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "h2di0rkgi05nwywsxnris4o3zstuorniakxochy3otvpzlm203z6v30famy6gml4mgvyz4kjy.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "vtetxc8i23h31rhmvvt3i3ry67vjferu6jc1bp10aka6hw6jnhddezknjqp2rw8c8mebatvm4a13x2a.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "zruwnnw3dz7qvsr97lp134sviuu09e22gv7921m6q08g2ivyzn8hcbtb4a574rn6skomgxjmu5771af.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "w3pxguingxxv12o0ts9pbesvo5ie10zhznxuj1omkirywb4kt3j27v6xjgf6w.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "l2cyq7nwu7pywl9v5305c6wg0hknssofpb2oka1jgwhbqz6uu766mx9r8s4ccqlsun5ypozrfcgentvv.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "2b8drmtd28sr0muvy75twstj7uofcmnvg886tjd8lvyds7f3as9xwu9qfidzis01mwta7nual.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "rpp488jbpd11tkqu43wo25akw6mik5it4j82189i8k0zm7394q.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "uwprtotcwjxcul5jfshyx30rp7gdare3mbavp8vzgu1el95jqs099j7a0eqmimzdgidop86.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "l3bo31sdpier2io2j6bwy8mcq8dj7jbxdy9372ds.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "qmay02ltaxpeyy5ew73052a0s0mqnun8vta66yc74ixshyzlw8zpd6.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "bon236tzoppyrv14ofrer6nx16jobc7tfmkhosv4edewmjlgti72x9b50k0yladj7n0akxol6ze.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "k68mkn3nicq5wh2dtgfxaaw5ubycwfpj658pj6m8wgo2fbbl74g496fsz.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "94t6smg4ujhtmsmzoenbugzizy80w8fpuqnknievop.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "3frke4qtu2t09fyyh83r4p390k2eo64e25i1sbeypzvz3sjp05qq.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "skp4w3l1vxni94hicrdab8ar4bb8mzgergfsy3hk6b.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "9ij38v5ppsw1qy3vdk5ieul0pgjpka65yh13rsmtb.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "xwxb8s24u829sb9atrgttuupjkfajpi1m3ulw3u7grpnaqbnx.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "t3wnlqbartcx2gn84f3oyh3aj8q9u4wlp1j87gbor4wnjjkrgy8.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "5f3v3rie2rnahlyzknug1kbn2bgy8di8h2p2x8b67crcn9gvklovs9d1tqqxdsuqtl4kg25l7ydf.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "r3k92rqx2cqqmjkh0jluj6p7hr1efafj3eyvj7cnrfnsvhptes2lsp1ixyz9lwfhs9jdai0ohcuu.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "486o4fug5yajur32bgvtuaaurngc5p3f2gkoh4dh87.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "pbask5j62lzw2xc4n7fy44v75j4w7h659n8y5wuveuaknnatnn2b9e1zeqe2dcsj.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "ix05ldtazq1q8orc88fmk76udhld6h7l1qb8jktu55ktj6.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "wd450hyueeofn9zh4mdg1qfdb6542cd0kkwo5p6z3.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "c55fsgkrjczfdkn26zyquu15hccwnfex4rayq6qow46l0155q9udlnjxr0bq896ymhc2gs2.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "op5hbyi9e0y8vt6v03j1gs6uv73iu2mo2fdi1aal.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "9dxhls4o65rhg1kbjw5qnm8li7vtrpui9ocbwto1tiho.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "n812v2ekq4gkhdc0bnlwe650qjscu9v0m62ex54g5j1mh3mbovzr5hojekjc7yna1snjwse0vv5rpuoe.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "bj1umn8jhtzb175js1fhrn0kv2c636qcxpd6bpa4q39eaidh.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "uublcw33ad9zvkmdgjux3hzl8ds541i46mxmu6zzf6xtgkel8tz0n7kfs5qr4s7utbx3kkhu1wikhkm5.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "buddkc501qh46h2j3wbl09zx6yayu9oii4umsh4yb9qi6g3jg1i31elcd1hz7c8n8rx9.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "sstqa3ut7ygcrxr0v12m6d2ozavmebq2tu2qbi52.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "pbj4d1d77nx7ni4h4sojdc5scostvadrm50dl1zz3cgby59r2gsdn.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "5j6s5ocjiqol6j2m1b3w94gdwjwq7exfcft0phzk4yvojua9y1.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "ccbx736491aqcul8l5k43bg9r9dkuvuewiudu6kc8bfm3k1re289j07rb1gg8.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "f5blrltp5mhewnlnrqwpvx4zgks26zhrmsdvsgqpeojb2nr9wa231c2c7k97jo55sh.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "0j4xd0qrmvevx725h8n07lkkvv2hhdbbiplu3pr9.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "x4eq8rho6y0bccemk5pggo7g3eaboffgrg7gade3efccrv2hxfjcrczn32sx4kty9y1o0ldej8zpd.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "4dtyz5qijlmarom744jay3o4k9bukhht7bfxx99u440jqk234kamckgauod38e5j10s60o3szznfj4.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "29v01ef6gia5imnriyhh1pwc9xvln56g2urcdn0jzoz7zctr1hc0m0yt6kqm6h6906vwr.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "9t2puv4cotobepspvksvgjuz9sfpnib49bt8deo2jisstmy44h41lr0i89cq2e0xyfifhb.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "yvksxlda4x4ouzuj1a9o3in342clgw00jyjiz6jva4znd0wkad6ggcu11b3lrxhkwzv26o1j2031.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:48.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "i8lwd0dhtzytdnp27pv11feo5h8ef364i69r2r2ptj5gtl8eutf5h6uvlw2gyn01seatwdw01tr3xo.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:58.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "prmw98iqlfwmc2ati3xe9oz2in1nj55g0vvytielokdbqc1e.c2domain.net",
+    "query_type": "NULL",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:08.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "oamcfaj0l369wqkqqsk0d6kyo5dje27tg913qylfd8r5n1fdnvnr.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:18.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "258n6uaanyudmx6mnkve14csz6k8emowtnkfsouqdtgaxucsku3r64l9fhi27sq8yj.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:28.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "85llnw3i1y9d1isty4g2qs8g40dysgy1sqrm2j67h5l5.c2domain.net",
+    "query_type": "CNAME",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:38.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "mb6s2p7c2hyr7no6kehgexjbnu7mj266qe7ecytcf78kr7o0flv.c2domain.net",
+    "query_type": "TXT",
+    "ip": "192.168.1.55",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:27:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.2.239",
+    "host": "workstation-08"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.1.12",
+    "host": "workstation-07"
+  },
+  {
+    "timestamp": "2026-06-27 20:28:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.10.208",
+    "host": "workstation-08"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.7.199",
+    "host": "workstation-17"
+  },
+  {
+    "timestamp": "2026-06-27 20:29:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.4.209",
+    "host": "workstation-08"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.2.10",
+    "host": "workstation-13"
+  },
+  {
+    "timestamp": "2026-06-27 20:30:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.10.161",
+    "host": "workstation-16"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.5.131",
+    "host": "workstation-13"
+  },
+  {
+    "timestamp": "2026-06-27 20:31:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.8.197",
+    "host": "workstation-17"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.1.228",
+    "host": "workstation-09"
+  },
+  {
+    "timestamp": "2026-06-27 20:32:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "microsoft.com",
+    "query_type": "A",
+    "ip": "192.168.6.84",
+    "host": "workstation-15"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.9.148",
+    "host": "workstation-18"
+  },
+  {
+    "timestamp": "2026-06-27 20:33:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.3.160",
+    "host": "workstation-06"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.4.33",
+    "host": "workstation-10"
+  },
+  {
+    "timestamp": "2026-06-27 20:34:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.8.227",
+    "host": "workstation-03"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.2.254",
+    "host": "workstation-12"
+  },
+  {
+    "timestamp": "2026-06-27 20:35:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.2.170",
+    "host": "workstation-19"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "amazon.com",
+    "query_type": "A",
+    "ip": "192.168.6.227",
+    "host": "workstation-15"
+  },
+  {
+    "timestamp": "2026-06-27 20:36:53.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "github.com",
+    "query_type": "A",
+    "ip": "192.168.6.234",
+    "host": "workstation-14"
+  },
+  {
+    "timestamp": "2026-06-27 20:37:23.392097",
+    "log_source": "dns",
+    "event_type": "dns_query",
+    "domain": "google.com",
+    "query_type": "A",
+    "ip": "192.168.9.172",
+    "host": "workstation-01"
+  }
+]

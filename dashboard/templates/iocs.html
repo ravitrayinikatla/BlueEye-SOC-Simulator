@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}- IOC Viewer{% endblock %}
+{% block topbar_title %}IOC Viewer — Indicators of Compromise{% endblock %}
+
+{% block head %}
+<style>
+.ioc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.ioc-stat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.2rem}
+.ioc-stat-label{font-size:.68rem;font-family:var(--font-mono);color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.ioc-stat-val{font-size:1.8rem;font-weight:800;font-family:var(--font-mono);color:var(--cyan)}
+.type-tag{display:inline-block;padding:2px 7px;border-radius:3px;font-size:.67rem;font-family:var(--font-mono)}
+.type-ip{background:rgba(239,68,68,.12);color:#ef4444;border:1px solid rgba(239,68,68,.25)}
+.type-domain{background:rgba(139,92,246,.12);color:#a78bfa;border:1px solid rgba(139,92,246,.25)}
+.type-other{background:rgba(100,116,139,.12);color:#94a3b8;border:1px solid rgba(100,116,139,.25)}
+.alert-chip{display:inline-block;background:rgba(37,99,235,.12);color:var(--cyan);border:1px solid rgba(37,99,235,.2);padding:1px 6px;border-radius:3px;font-size:.65rem;font-family:var(--font-mono);margin:1px}
+.search-box{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:7px 12px;border-radius:6px;font-size:.8rem;font-family:var(--font-mono);width:260px}
+.search-box::placeholder{color:var(--dim)}
+.search-box:focus{outline:none;border-color:var(--cyan)}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div>
+        <a href="/" style="color:var(--dim);font-size:.75rem;text-decoration:none;font-family:var(--font-mono)">← Back to Dashboard</a>
+        <div class="page-title" style="margin-top:.4rem">IOC Viewer</div>
+        <div class="page-sub">// extracted indicators of compromise across all alerts</div>
+    </div>
+    <input class="search-box" id="iocSearch" placeholder="🔍 Filter IOCs..." oninput="filterIOCs(this.value)">
+</div>
+
+<!-- STATS -->
+<div class="ioc-grid">
+    <div class="ioc-stat">
+        <div class="ioc-stat-label">Total IOCs</div>
+        <div class="ioc-stat-val">{{ iocs|length }}</div>
+    </div>
+    <div class="ioc-stat">
+        <div class="ioc-stat-label">IP Addresses</div>
+        <div class="ioc-stat-val" style="color:var(--critical)">{{ iocs|selectattr('type','eq','IP Address')|list|length }}</div>
+    </div>
+    <div class="ioc-stat">
+        <div class="ioc-stat-label">Domains</div>
+        <div class="ioc-stat-val" style="color:var(--purple)">{{ iocs|selectattr('type','eq','Domain')|list|length }}</div>
+    </div>
+</div>
+
+<!-- IOC TABLE -->
+<div class="card">
+    <div class="card-header">
+        <span class="card-title">🔍 All Indicators</span>
+        <span class="mono">{{ iocs|length }} unique IOCs</span>
+    </div>
+    {% if iocs %}
+    <table id="iocTable">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Indicator</th>
+                <th>Severity</th>
+                <th>Associated Alerts</th>
+                <th>Risk</th>
+                <th>Threat Intel</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ioc in iocs %}
+        <tr class="ioc-row" data-ioc="{{ ioc.ioc }}">
+            <td>
+                {% if ioc.type == 'IP Address' %}
+                <span class="type-tag type-ip">🌐 IP</span>
+                {% elif ioc.type == 'Domain' %}
+                <span class="type-tag type-domain">🔗 Domain</span>
+                {% else %}
+                <span class="type-tag type-other">📦 Other</span>
+                {% endif %}
+            </td>
+            <td><span class="mono" style="font-size:.8rem;color:var(--txt)">{{ ioc.ioc }}</span></td>
+            <td><span class="badge badge-{{ ioc.severity }}">{{ ioc.severity }}</span></td>
+            <td>
+                {% for alert in ioc.alerts %}
+                <span class="alert-chip">{{ alert }}</span>
+                {% endfor %}
+            </td>
+            <td>
+                {% set risk = ioc.alerts|length * 20 %}
+                {% if risk > 100 %}{% set risk = 100 %}{% endif %}
+                <div class="score-wrap">
+                    <div class="score-bar" style="width:60px">
+                        <div class="score-fill" style="width:{{ risk }}%;background:{% if risk >= 80 %}var(--critical){% elif risk >= 50 %}var(--high){% else %}var(--medium){% endif %}"></div>
+                    </div>
+                    <span class="score-num">{{ risk }}</span>
+                </div>
+            </td>
+            <td>
+                {% if ioc.type == 'IP Address' %}
+                <a href="https://www.virustotal.com/gui/ip-address/{{ ioc.ioc }}" target="_blank" class="btn btn-ghost" style="padding:2px 8px;font-size:.65rem">VT ↗</a>
+                <a href="https://www.abuseipdb.com/check/{{ ioc.ioc }}" target="_blank" class="btn btn-ghost" style="padding:2px 8px;font-size:.65rem">AbuseIPDB ↗</a>
+                {% elif ioc.type == 'Domain' %}
+                <a href="https://www.virustotal.com/gui/domain/{{ ioc.ioc }}" target="_blank" class="btn btn-ghost" style="padding:2px 8px;font-size:.65rem">VT ↗</a>
+                {% else %}
+                <span class="mono" style="font-size:.67rem;color:var(--dim)">—</span>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="empty">No IOCs found. Run generators/generate_all.py to populate logs.</div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function filterIOCs(query) {
+    const q = query.toLowerCase();
+    document.querySelectorAll('.ioc-row').forEach(row => {
+        const ioc = row.getAttribute('data-ioc').toLowerCase();
+        row.style.display = ioc.includes(q) ? '' : 'none';
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+  "74B2134FC6": {
+    "status": "INVESTIGATING",
+    "analyst": "Analyst-01",
+    "notes": "IP 45.33.32.156 confirmed malicious on VirusTotal.\nAttacker targeted DC-01 Domain Controller.\nMITRE T1078 - Valid Accounts technique used.\n8 privilege escalation events detected.\nEVT 4698 shows persistence via scheduled task.\nIsolating host and resetting admin credentials.",
+    "updated_at": "2026-06-27 22:15:45.630732"
+  },
+  "F7BE5659B9": {
+    "status": "RESOLVED",
+    "analyst": "Analyst-01",
+    "notes": "RESOLVED - 2026-06-27\nIP 192.168.1.30 beaconing confirmed malicious via VirusTotal.\nC2 servers 203.0.113.77 and 198.51.100.200 blocked at firewall.\nHost workstation-03 isolated from network successfully.\nMalware sample collected and sent for analysis.\nAll C2 communication stopped after host isolation.\nScheduled task removed. Services cleaned.\nUser account reset. Machine sent for reimaging.\nIncident closed - no further beaconing detected.",
+    "updated_at": "2026-06-27 22:45:00.551678"
+  }
+}
